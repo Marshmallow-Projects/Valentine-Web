@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Prevent scrolling when buttons grow */
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #f85f5f;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+audio {
+    display: none;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+button {
+    background-color: #ff4d4d;
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+} 
+
+#yesButton:hover {
+    background-color: #ff1a1a;
+}
+#noButton:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+#noButton {
+    color: #ff4d4d;
+    background-color: whitesmoke;
+    border: 2px solid #ff4d4d;
+    z-index: 1;
+    position: relative; /* Allow it to move dynamically */
+}
+
+.celebration-text {
+    color: #ff1493;
+    font-size: 1.5em;
+    margin-top: 20px;
+    line-height: 1.6;
+    animation: floatText 2s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.celebration-text p {
+    margin: 10px 0;
+}
+
+/* Footer */
+.branding-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ffb6c1;
+    font-size: 0.9em;
+}
+
+.footer-left a, .fbutton {
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: small;
+}
+
+.footer-left a:hover {
+    color: #ff1493;
+    text-decoration: underline;
+}
+
+.footer-right {
+    color: #ff4d4d;
+    font-style: italic;
+}
+.footer-right a {
+    text-decoration: none;
+}
